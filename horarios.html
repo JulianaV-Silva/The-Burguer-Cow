@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <title>Horários | The Burger COW</title>
+    <link rel="icon" href="imagens-site/logovaca.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Sansita&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="horarios.css">
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <img src="imagens-site/logocnome.png" width="170" alt="The Burger COW Logo">
+        </div>
+
+        <nav id="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cardapio.html">Cardápio</a></li>
+                <li><a href="index.html#quemsomos">Quem Somos</a></li>
+                <li><a href="horarios.html">Horários</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="conteudo-horario">
+        <!-----Titulo -->
+        <div id="pag-horario">
+            <div class="fundoc">
+                <img src="imagens-site/fundomanchas.jpg" width=100% alt="Fundo do cardápio">
+                <div class="titulofundo">
+                    <h1>Horários</h1>
+                </div>
+            </div>
+        </div>
+        <!-----Ínicio da tabela dos horários -->
+        <article id="horarios">
+
+            <table border="1">
+                <caption> Horários de Funcionamento </caption>
+                <thead>
+                    <tr>
+                        <th>Dia</th>
+                        <th>Horários</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Domingo a Terça e feriados</td>
+                        <td>Fechados</td>
+                    </tr>
+                    <tr>
+                        <td>Quarta e Quinta</td>
+                        <td>19:00 às 22:00</td>
+                    </tr>
+                    <tr>
+                        <td>Sexta e Sábado</td>
+                        <td>19:00 às 00:00</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p id="aviso-horario">Os horários estão desatualizados. Clique no botão abaixo para atualizar.</p>
+            <button onclick="mudarHorario()">Atualizar Horários</button>
+        </article>
+    </section>
+    <!----Rodapé-->
+    <article id="pagina4">
+        <div class="flex-informacao">
+            <div class="bloco-informacao">
+                <div class="institucional">
+                    <nav id="int">
+                        <h2>Institucional</h2>
+                        <ul>
+                            <li><a href="index.html#quemsomos">Quem Somos</a></li>
+                            <li>
+                                <a href="https://wa.me/5551999853464?text=Olá%2C%20gostaria%20de%20fazer%20um%20pedido!"
+                                    target="_blank">
+                                    Peça Aqui
+                                </a>
+                            </li>
+                            <li><a href="contato.html">Contato</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="bloco-informacao">
+                <div class="cardapio">
+                    <h2>Cardápio</h2>
+                    <nav id="car">
+                        <ul>
+                            <li><a href="cardapio.html">Burguer</a></li>
+                            <li><a href="cardapiop.html">Porções</a></li>
+                            <li><a href="cardapiob.html">Bebidas</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="img-logo">
+                <img src="imagens-site/logovaca.png" width=70 alt="logovaca">
+            </div>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d852.4812580444614!2d-51.096882161981554!3d-29.920115635177744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9519717f4e76d9bb%3A0x59f73fa08972d85b!2sAv.%20Obedy%20C%C3%A2ndido%20Vieira%2C%20Cachoeirinha%20-%20RS%2C%2094931-023!5e0!3m2!1spt-BR!2sbr!4v1746332554817!5m2!1spt-BR!2sbr"
+                width="400" height="150" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </article>
+    <footer>
+        <div id="direitos">
+            <h3>© 2025 The Burger Cow - Todos os direitos reservados</h3>
+        </div>
+    </footer>
+
+    <script>
+        //Função para mudar a tabela
+        function mudarHorario() {
+            const tabela = document.querySelector("table tbody"); // Seleciona o tbody
+            tabela.rows[0].cells[1].textContent = "Fechados";
+            tabela.rows[1].cells[1].textContent = "19:00 às 23:00";
+            tabela.rows[2].cells[1].textContent = "19:00 às 01:00";
+
+            //Para esconder o botão depois de clicar
+            const botao = document.querySelector("button");
+            botao.style.display = "none";
+
+            //Remove frase depois do clique no botão
+
+            document.querySelector("#aviso-horario").remove();
+        }
+        // Mudança da estilização da lista
+        const linksRodape = document.querySelectorAll('#pagina4 a');
+
+        linksRodape.forEach(link => {
+            link.classList.add('link-animado');
+
+            link.addEventListener('mouseenter', () => {
+                link.classList.add('hover-ativo');
+            });
+
+            link.addEventListener('mouseleave', () => {
+                link.classList.remove('hover-ativo');
+            });
+        });
+    </script>
+
+</body>
+
+</html>

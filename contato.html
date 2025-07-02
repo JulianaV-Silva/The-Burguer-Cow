@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <title> Contato | The Burger COW</title>
+  <link rel="icon" href="imagens-site/logovaca.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Sansita&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="contato.css">
+</head>
+
+<body>
+  <header>
+    <div id="logo">
+      <img src="imagens-site/logocnome.png" width="170" alt="The Burger COW Logo">
+    </div>
+
+    <nav id="menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cardapio.html">Cardápio</a></li>
+        <li><a href="index.html#quemsomos">Quem Somos</a></li>
+        <li><a href="horarios.html">Horários</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Título-->
+  <section id="conteudo-contato">
+    <div id="pag-contato">
+      <div class="fundoc">
+        <img src="imagens-site/fundomanchas.jpg" width=100% alt="Fundo do cardápio">
+        <div class="titulofundo">
+          <h1>Contato</h1>
+        </div>
+      </div>
+
+      <!-- Formulário Contato -->
+      <section class="formulario-contato">
+        <h3>Dúvidas e sugestões?</h3>
+        <h2>Envie-nos uma mensagem</h2>
+        <form id="formulario">
+          <div class="linha">
+            <div class="campo">
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" name="nome" required>
+            </div>
+
+            <div class="campo">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="campo">
+              <label for="telefone">Telefone</label>
+              <input type="tel" id="telefone" name="telefone">
+            </div>
+          </div>
+
+          <div class="linha">
+            <div class="campo">
+              <label for="visita">Já nos visitou?</label>
+              <select id="visita" name="visita">
+                <option>Sim</option>
+                <option>Não</option>
+              </select>
+            </div>
+
+            <div class="campo">
+              <label for="assunto">Selecione um assunto</label>
+              <select id="assunto" name="assunto">
+                <option>Dúvida</option>
+                <option>Sugestão</option>
+                <option>Reclamação</option>
+                <option>Outros</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="campo-mensagem">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+          </div>
+
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+
+      <!-- Rodapé -->
+      <article id="pagina4">
+        <div class="flex-informacao">
+          <div class="bloco-informacao">
+            <div class="institucional">
+              <nav id="int">
+                <h2>Institucional</h2>
+                <ul>
+                  <li><a href="index.html#quemsomos">Quem Somos</a></li>
+                  <li>
+                    <a href="https://wa.me/5551999853464?text=Olá%2C%20gostaria%20de%20fazer%20um%20pedido!"
+                      target="_blank">
+                      Peça Aqui
+                    </a>
+                  </li>
+                  <li><a href="contato.html">Contato</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="bloco-informacao">
+            <div class="cardapio">
+              <h2>Cardápio</h2>
+              <nav id="car">
+                <ul>
+                  <li><a href="cardapio.html">Burguer</a></li>
+                  <li><a href="cardapiop.html">Petiscos</a></li>
+                  <li><a href="cardapiob.html">Bebidas</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="img-logo">
+            <img src="imagens-site/logovaca.png" width=70 alt="logovaca">
+          </div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d852.4812580444614!2d-51.096882161981554!3d-29.920115635177744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9519717f4e76d9bb%3A0x59f73fa08972d85b!2sAv.%20Obedy%20C%C3%A2ndido%20Vieira%2C%20Cachoeirinha%20-%20RS%2C%2094931-023!5e0!3m2!1spt-BR!2sbr!4v1746332554817!5m2!1spt-BR!2sbr"
+            width="400" height="150" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </article>
+      <footer>
+        <div id="direitos">
+          <h3>© 2025 The Burger Cow - Todos os direitos reservados</h3>
+        </div>
+      </footer>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {  // Espera o site carregar
+          const form = document.getElementById("formulario"); // Seleciona o formulário pelo ID
+          const botao = form.querySelector("button"); // Seleciona o botão 
+
+          form.addEventListener("submit", function (event) {
+            event.preventDefault(); // Impede o regarregamento da página
+
+            // Altera estilos
+            form.style.backgroundColor = "#e6dccd";
+            form.style.border = "2px solid #d98c00";
+            form.style.borderRadius = "15px";
+            form.style.padding = "20px";
+
+            // Muda botão
+            botao.textContent = "Mensagem enviada!";
+            botao.style.backgroundColor = "#ccc";
+            botao.disabled = true;
+
+            //Mensagem de confirmação
+            const mensagem = document.createElement("p");
+            mensagem.textContent = "Obrigado! Sua mensagem foi enviada com sucesso.";
+            mensagem.style.color = "black";
+            mensagem.style.fontWeight = "bold";
+            mensagem.style.marginTop = "15px";
+            mensagem.style.fontSize = "18px";
+            // Adiciona a mensagem de confirmação no final do formulário
+            form.appendChild(mensagem);
+          });
+        });
+        // Mudança da estilização da lista
+        const linksRodape = document.querySelectorAll('#pagina4 a');
+
+        linksRodape.forEach(link => {
+          link.classList.add('link-animado');
+
+          link.addEventListener('mouseenter', () => {
+            link.classList.add('hover-ativo');
+          });
+
+          link.addEventListener('mouseleave', () => {
+            link.classList.remove('hover-ativo');
+          });
+        });
+      </script>
+
+</body>
+
+</html>

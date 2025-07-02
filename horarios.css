@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+.container {
+  position: absolute;
+
+
+}
+
+.fundoc {
+  position: relative;
+  width: 100%;
+}
+
+.fundoc img {
+  width: 100%;
+  display: block;
+  position: relative;
+}
+
+.titulofundo {
+  position: absolute;
+  top: 50%;
+  /*Posiciona vertical*/
+  left: 50%;
+  /* Posiciona horizontal */
+  transform: translate(-50%, -50%);
+  /*Centraliza de forma precisa*/
+  text-align: center;
+  width: 100%;
+}
+
+.fundoc h1 {
+  color: #e6dccd;
+  font-family: 'Sansita', sans-serif;
+  font-size: 70px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+}
+
+
+#conteudo-horario {
+  background-color: #e6dccd;
+
+}
+
+
+#horarios {
+  padding: 150px;
+  text-align: center;
+  min-height: 150px
+}
+
+table {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #e6dccd;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+caption {
+  font-size: 40px;
+  font-family: 'Sansita', sans-serif;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #d5820d;
+}
+
+th,
+td {
+  padding: 16px;
+  border: 1px solid #e0c3a3;
+}
+
+th {
+  background-color: #961312;
+  color: #e6dccd;
+  font-size: 19PX;
+}
+
+td {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+tr:hover {
+  background-color: rgba(213, 130, 13, 0.3);
+  ;
+}
+
+#aviso-horario {
+  font-family: 'sansita', sans-serif;
+  color: black;
+  font-size: 16px;
+  margin-top: 15px;
+  text-align: center;
+}
+
+button {
+  background-color: #d5820d;
+  color: black;
+  font-family: 'Sansita', sans-serif;
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #961312;
+  transform: scale(1.05);
+}
+
+button:active {
+  background-color: #e6b800;
+  transform: scale(0.98);
+}
+
+@media (max-width: 900px) {
+  #horarios {
+    padding: 60px 20px;
+  }
+
+  table {
+    width: 95%;
+  }
+
+  caption {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  th {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  td {
+    font-size: 16px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 500px) {
+  #horarios {
+    padding: 40px 10px;
+  }
+
+  .fundoc h1 {
+    font-size: 40px;
+  }
+
+  caption {
+    font-size: 22px;
+  }
+
+  th,
+  td {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  table {
+    width: 100%;
+    font-size: 14px;
+  }
+}

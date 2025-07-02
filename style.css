@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Cabeçalho fixo*/
+header {
+    width: 100%;
+    height: 90px;
+    background-color: #e6dccd;
+    display: flex;
+    /*Para deixar logo e menu lado a lado*/
+    justify-content: space-between;
+    /*Espaço entre logo e menu*/
+    align-items: center;
+    /*Alinha verticalmente*/
+    padding: 0 60px;
+    /* Espaço interno de um elemento*/
+}
+
+#logo {
+    display: block;
+    /*O elemento ocupa toda a largura disponível e começa uma nova linha*/
+    pointer-events: none;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#menu ul {
+
+    display: flex;
+    gap: 60px;
+}
+
+#menu li a {
+    color: #961312;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: 'Sansita', sans-serif;
+    text-decoration: none;
+    /*Retira a decoração do sublinhado do link*/
+    transition: color 0.3s ease;
+    /*Transição ao passar o mouse*/
+}
+
+#menu li a:hover {
+    /*usado para aplicar estilo quando o mouse passa por cima*/
+    color: #d5820d;
+    /*Muda a cor da palavra ao passar o mouse*/
+}
+
+/*Rodapé Fixo*/
+#pagina4 {
+    background-color: #961312;
+    min-height: 10vh;
+    justify-content: flex-start;
+    /*Alinha no topo */
+    flex-direction: column;
+    position: relative;
+    overflow: visible;
+}
+
+#pagina4 ul li a {
+    color: #e6dccd;
+    font-family: 'Sansita', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+#pagina4 ul li a:hover {
+    color: #d5820d;
+}
+
+.flex-informacao {
+    display: flex;
+    flex-direction: row;
+    /*define a ordem (1-2-3)*/
+    flex-wrap: nowrap;
+    /*quebra da linha*/
+    justify-content: space-evenly;
+    /*itens são colocados no eixo principal com espaçamentos equivalentes entre si*/
+    align-items: center;
+    /*Para alinhar ao centro*/
+    gap: 30px;
+    /* Espaço entre os blocos */
+    padding: 40px 0;
+}
+
+.bloco-informacao h2 {
+    color: #e6dccd;
+    font-family: 'Sansita', sans-serif;
+    margin-bottom: 10px;
+}
+
+.img-logo {
+    width: 70;
+    transform: rotate(18deg);
+    pointer-events: none;
+}
+
+footer {
+    width: 100%;
+    height: 40px;
+    background-color: #d5820d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#direitos {
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10px;
+    text-align: center;
+}
+
+/*estilização da lista rodapé*/
+.link-animado {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: #5a2d0c; /* marrom escuro */
+  transition: transform 0.3s ease;
+}
+
+.link-animado::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #d5820d; 
+  transition: width 0.3s ease;
+}
+
+.link-animado.hover-ativo {
+  transform: scale(1.05);
+}
+
+.link-animado.hover-ativo::after {
+  width: 100%;
+}
+
+/* Estilo geral da barra (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Fundo da barra */
+::-webkit-scrollbar-track {
+  background: #fff6e0; /* tom amarelo claro */
+}
+
+/*Botão da rolagem */
+::-webkit-scrollbar-thumb {
+  background: #8b4513; /* marrom escuro */
+  border-radius: 10px;
+  border: 2px solid #fff6e0; /* borda para suavizar o contraste */
+}
+
+/* Ao passar o mouse */
+::-webkit-scrollbar-thumb:hover {
+  background: #d5820d; /* vermelho forte */
+}
+
+/* Firefox */
+body {
+  scrollbar-width: thin;
+  scrollbar-color: #8b4513 #fff6e0;
+}
+
+@media (max-width: 1024px) {
+    header {
+        padding: 0 30px;
+    }
+
+    #menu ul {
+        gap: 30px;
+    }
+
+    #menu li a {
+        font-size: 20px;
+    }
+
+
+    footer {
+        height: 50px;
+    }
+
+    #direitos {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 0 15px;
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+    }
+
+    #menu ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #menu li a {
+        font-size: 18px;
+    }
+
+    .flex-informacao {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .bloco-informacao {
+        flex: 1 1 100%;
+        min-width: auto;
+    }
+
+    .img-logo {
+        width: 40px;
+    }
+
+    footer {
+        height: 60px;
+        padding: 0 10px;
+    }
+
+    #direitos {
+        font-size: 10px;
+    }
+}

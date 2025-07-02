@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}article {
+     margin-top: 0;
+     padding-top: 0;
+}
+
+#pagina1 {
+    background-color: #961312;
+    justify-content: space-between;
+    display: flex;
+    padding: 20px 60px;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#hamburguer {
+    margin-left: -280px;
+    /* empurra a imagem para fora da tela à esquerda */
+    pointer-events: none;
+    /*impede que a imagem seja clicada*/
+}
+.seta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    pointer-events: none; 
+}
+
+.interface-inicial {
+    height: 100vh;
+    /*ocupa a altura da tela inteira */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /*coloca o conteúdo no final da tela */
+    align-items: center;
+    padding-bottom: 40px;
+    text-align: center;
+    background-color: #fff4d6;
+    /*cor de fundo da sua página inicial*/
+}
+
+.circulo {
+    padding: 10px 30px;
+    border-radius: 20px;
+    background-color: #d5820d;
+    position: absolute;
+    bottom: 75px;
+    /*define a posição vertical de um elemento em relação à sua borda inferior*/
+    left: 50%;
+    transform: translateX(-50%);
+    /*move o elemento ao longo do eixo horizontal (X)*/
+    z-index: 10;
+}
+
+#pecaja {
+    color: #e6dccd;
+    font-family: 'Sansita', sans-serif;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+#slogan {
+    pointer-events: none;
+}
+
+#pagina2 {
+    background-color: #d5820d;
+    justify-content: center;
+    gap: 250px;
+    margin-top: -60px;
+    /* faz a parte de cima do amarelo aparecer */
+    padding-top: 80px;
+    /* garante que o conteúdo não fique cortado */
+    height: 100vh;
+    /* para ocupar a tela inteira */
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/*Para esconder a frase minha ideia é colocar o som mugido da vaca quando aprender o Javacript*/
+.containervaca {
+    position: relative;
+    display: inline-block;
+}
+
+.frase {
+    display: none;
+    /*Esconde a frase*/
+    position: absolute;
+    top: 20%;
+    /*Coloca na vertical*/
+    left: 90%;
+    /*coloca a direita da vaca*/
+    transform: rotate(-20deg);
+    /*inclina a frase*/
+    color: black;
+    background-color: #e6dccd;
+    /*cor da borda*/
+    /*talvez eu tire*/
+    padding: 8px 12px;
+    font-size: 28px;
+    font-family: 'Baloo 2', cursive;
+    white-space: nowrap;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+.containervaca:hover .frase {
+    display: block;
+    /*Mostra a frase ao passar o mouse*/
+}
+
+.containervaca audio {
+     display: none;
+    margin: 10px auto 0 auto; /* Espaço acima, centraliza horizontalmente */
+    width: 200px; /* Ajuste a largura do player */
+}
+
+
+#sobrenos {
+    color: #961312;
+    font-family: 'Sansita', sans-serif;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+#texto {
+    color: #e6dccd;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    max-width: 800px;
+    /*Limita largura para melhor leitura */
+    line-height: 1.6;
+    text-align: justify;
+}
+
+#pagina3 {
+    background-color: #e6dccd;
+    min-height: 100vh;
+    justify-content: flex-start;
+    /*Alinha no topo */
+    flex-direction: column;
+    position: relative;
+    overflow: visible;
+}
+
+#titulo3 {
+    text-align: center;
+    padding-top: 40px;
+}
+#titulo3 h3 {
+    display: inline-block;
+    font-family: 'Sansita', sans-serif;
+    font-size: 30px;
+    color: black;
+        text-shadow: 3px 3px 8px gray;
+
+}
+#titulo3 h1 {
+
+    display: inline-block;
+    font-family: 'Sansita', sans-serif;
+    font-size: 70px;
+    color: #961312;
+        text-shadow: 3px 3px 8px gray;
+
+}
+
+
+.flex-cardapio {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.bloco-cardapio {
+  width: 300px;
+  border-radius: 15px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+}
+
+.bloco-cardapio:hover {
+  transform: scale(1.03);
+  transition: transform 0.3s ease-in-out;
+}
+
+.imagem-container {
+  position: relative;
+  width: 100%;
+  height: 500px; 
+  overflow: hidden;
+}
+
+.imagem-container::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* atalho para top, right, bottom, left = 0 */
+  background-color: black;
+  opacity: 0.4;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.imagem-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: relative;
+  z-index: 0;
+}
+
+/* Título centralizado */
+.imagem-container h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  color: #e6dccd;
+  font-weight: bold;
+  font-size: 30px;
+  font-family: 'Sansita', sans-serif;
+  text-align: center;
+  z-index: 2;
+  pointer-events: none;
+}
+

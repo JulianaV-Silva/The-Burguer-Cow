@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <title>The Burger COW | Hamburgueria</title>
+  <link rel="icon" href="imagens-site/logovaca.png" type="image/png"> <!---Para aparecer o logo na aba-->
+  <link href="https://fonts.googleapis.com/css2?family=Sansita&family=Open+Sans&display=swap" rel="stylesheet">
+  <!------Fonte Sansita-->
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet"> <!-------Fonte Baloo 2-->
+  <link rel="stylesheet" href="style.css"> <!----Link CSS fixo-->
+  <link rel="stylesheet" href="interfaceinicial.css"> <!----Link CSS variável-->
+</head>
+
+<body>
+  <!-----Menu principal do site-->
+  <header>
+    <div id="logo">
+      <img src="imagens-site/logocnome.png" width="170" alt="The Burger COW Logo">
+    </div>
+    <nav id="menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cardapio.html">Cardápio</a></li>
+        <li><a href="index.html#quemsomos">Quem Somos</a></li>
+        <li><a href="horarios.html">Horários</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-----Primeira interface do site-->
+  <article id="pagina1">
+    <div id="hamburguer">
+      <img src="imagens-site/hamburguercapa.png" width="800" alt="hamburguer capa">
+    </div>
+    <div class="seta">
+      <img src="imagens-site/seta.png" width="800" alt="seta amarela">
+    </div>
+    <div class="circulo">
+      <a href="https://wa.me/5551999853464?text=Olá%2C%20gostaria%20de%20fazer%20um%20pedido!" id="pecaja"
+        target="_blank">
+        Peça já!
+      </a>
+    </div>
+    <div id="slogan"> <!---Slogan (feito por png, pois editei no photoshop)-->
+      <img src="imagens-site/frase.png" width="600" alt="slogan">
+    </div>
+  </article>
+
+  <!-----Segunda interface do site-->
+  <article id="pagina2">
+    <div class="containervaca">
+      <section id="quemsomos"></section>
+      <img id="logo-vaca-rolagem" src="imagens-site/logovaca.png" width="350" alt="logo">
+      <span class="frase">MUUUUUUUUUU</span><!---Frase aparecerá ao passar o mouse pela vaca-->
+      <audio id="audio-vaca">
+        <source src="som/vaca-mugindo.mp3" type="audio/mp3">
+        Seu navegador não suporta áudio.
+      </audio>
+    </div>
+    <div>
+      <h2 id="sobrenos">Conheça sobre nós</h2>
+      <div id="texto">
+        <p>The Burger Cow nasceu do sonho de Adrian Becker, que sempre foi apaixonado por hambúrgueres artesanais e pela
+          busca incessante por sabores autênticos. Depois de muitas viagens e experiências gastronômicas, ele decidiu
+          levar sua paixão a sério e, em 2020, abriu a primeira unidade da The Burger Cow em Cachoeirinha/RS.</p>
+
+        <p>O nome "The Burger Cow" reflete a essência da nossa marca de forma divertida e marcante. A vaca, presente no
+          nosso logo, é o símbolo da carne de qualidade que usamos em nossos hambúrgueres – simples, mas com um sabor
+          inconfundível.</p>
+
+        <p>Hoje, a The Burger Cow é sinônimo de sabor, qualidade e inovação. Com nosso compromisso com o frescor e a
+          autenticidade, estamos sempre prontos para proporcionar uma experiência gastronômica memorável.</p>
+      </div>
+    </div>
+  </article>
+
+  <!----Terceira interface do site-->
+  <article id="pagina3">
+    <div id="titulo3">
+      <h3>Aprecie nosso</h3><br>
+      <h1>Cardápio</h1>
+      <section id="cardapio"></section>
+    </div>
+    <div class="flex-cardapio">
+      <div class="bloco-cardapio">
+        <div class="imagem-container">
+          <a href="cardapio.html">
+            <img src="imagens-site/burguers.PNG" alt="Hambúrgueres">
+          </a>
+          <h3>Burgers</h3>
+        </div>
+      </div>
+      <div class="bloco-cardapio">
+        <div class="imagem-container">
+          <a href="cardapiop.html">
+            <img src="imagens-site/batatafrita.png" alt="Batata Frita">
+          </a>
+          <h3>Porções</h3>
+        </div>
+      </div>
+      <div class="bloco-cardapio">
+        <div class="imagem-container">
+          <a href="cardapiob.html">
+            <img src="imagens-site/bebidas.jpg" alt="Bebidas">
+          </a>
+          <h3>Bebidas</h3>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- Rodapé -->
+  <article id="pagina4">
+    <div class="flex-informacao">
+      <div class="bloco-informacao">
+        <nav id="int">
+          <h2>Institucional</h2>
+          <ul>
+            <li><a href="index.html#quemsomos">Quem Somos</a></li>
+            <li>
+              <a href="https://wa.me/5551999853464?text=Olá%2C%20gostaria%20de%20fazer%20um%20pedido!" target="_blank">
+                Peça Aqui
+              </a>
+            </li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="bloco-informacao">
+        <h2>Cardápio</h2>
+        <nav id="car">
+          <ul>
+            <li><a href="cardapio.html">Burguer</a></li>
+            <li><a href="cardapiop.html">Porções</a></li>
+            <li><a href="cardapiob.html">Bebidas</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="img-logo">
+        <img src="imagens-site/logovaca.png" width="70" alt="logovaca">
+      </div>
+      <!------para usar no JS-->
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d852.4812580444614!2d-51.096882161981554!3d-29.920115635177744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9519717f4e76d9bb%3A0x59f73fa08972d85b!2sAv.%20Obedy%20C%C3%A2ndido%20Vieira%2C%20Cachoeirinha%20-%20RS%2C%2094931-023!5e0!3m2!1spt-BR!2sbr!4v1746332554817!5m2!1spt-BR!2sbr"
+        width="400" height="150" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </article>
+
+  <footer>
+    <div id="direitos">
+      <h3>© 2025 The Burger Cow - Todos os direitos reservados</h3>
+    </div>
+
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {  //Espera o site carregar
+      const vaca = document.querySelector('.containervaca img'); // Seleciona a imagem
+      const frase = document.querySelector('.containervaca .frase'); // Seleciona a frase
+      const audio = document.getElementById('audio-vaca'); // Seleciona o áudio
+
+      // Esconde a frase inicialmente
+      frase.style.display = 'none';
+
+      // Salva o caminho original da imagem
+      const imagemOriginal = vaca.src;
+
+      // Caminho da nova imagem
+      const novaImagem = 'imagens-site/vacamugindo.png';
+
+      // mouse entra na imagem
+      vaca.addEventListener('mouseenter', () => {
+        frase.style.display = 'inline'; // mostra a frase
+        audio.currentTime = 0; // reinicia áudio
+        audio.play(); // toca o áudio
+        vaca.src = novaImagem;// troca imagem
+      });
+
+      // mouse sai da imagem
+      vaca.addEventListener('mouseleave', () => {
+        frase.style.display = 'none'; // esconde a frase
+        audio.pause(); // pausa o áudio
+        audio.currentTime = 0; // reinicia
+        vaca.src = imagemOriginal; // volta à imagem original
+      });
+
+      // Rotaciona a vaca conforme a rolagem
+      const logoVaca = document.getElementById('logo-vaca-rolagem');
+
+      window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+        const rotacao = Math.min(scrollY * -0.5, -20); // Limita a rotação
+        logoVaca.style.transform = `rotate(${rotacao}deg)`; // Aplica a rotação
+      });
+      // Alerta que aparece quando a aba fica invisível, aparecerá apenas uma vez para não ficar repetitivo para o usuário
+      let mensagemExibida = false;
+
+      document.addEventListener("visibilitychange", function () {
+        if (!document.hidden && !mensagemExibida) {  // aba visível e alerta ainda não exibido
+          alert(" Oi! Que bom que voltou 🐄");
+          mensagemExibida = true;  // marca que o alerta já foi mostrado
+        }
+      });
+
+      // Mudança da estilização da lista
+      const linksRodape = document.querySelectorAll('#pagina4 a');
+
+      linksRodape.forEach(link => {
+        link.classList.add('link-animado');
+
+        link.addEventListener('mouseenter', () => {
+          link.classList.add('hover-ativo'); // Aplica o estilo ao passar o mouse
+        });
+        // Quando o mouse sai do item
+        link.addEventListener('mouseleave', () => {
+          link.classList.remove('hover-ativo'); // Remove o estilo Hover
+        });
+      });
+
+    }); // fim do DOMContentLoaded
+  </script>
+
+</body>
+
+</html>
