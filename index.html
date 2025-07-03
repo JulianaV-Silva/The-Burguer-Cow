@@ -167,18 +167,12 @@
       // Esconde a frase inicialmente
       frase.style.display = 'none';
 
-      // Salva o caminho original da imagem
-      const imagemOriginal = vaca.src;
-
-      // Caminho da nova imagem
-      const novaImagem = 'imagens-site/vacamugindo.png';
-
+      
       // mouse entra na imagem
       vaca.addEventListener('mouseenter', () => {
         frase.style.display = 'inline'; // mostra a frase
         audio.currentTime = 0; // reinicia áudio
         audio.play(); // toca o áudio
-        vaca.src = novaImagem;// troca imagem
       });
 
       // mouse sai da imagem
